@@ -27,6 +27,7 @@ jobs:
       - run: |
           git clone git@github.com:playwrigkt/skript.git
           cd skript/
+          git checkout origin/develop
           git checkout -b master
           ./gradlew build
       - run:
@@ -52,7 +53,7 @@ jobs:
       - run: |
             git clone git@github.com:playwrigkt/skript-examples.git
             cd skript-examples/
-            git checkout -b master
+            git checkout origin/master
             ./gradlew build
       - deploy:
           command: |
